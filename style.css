@@ -1,0 +1,11 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.card {
+  border-radius: 1.5rem;
+}
+
+textarea.form-control {
+  resize: vertical;
+}

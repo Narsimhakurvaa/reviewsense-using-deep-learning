@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm rounded-4">
+      <div class="card-body p-4">
+        <h2 class="fw-bold text-center mb-3">Movie Sentiment Analyzer</h2>
+        <p class="text-muted text-center">
+          Trained on <strong>IMDB Top 1000</strong> using movie descriptions & ratings.
+          Enter any movie-style text and get a sentiment prediction.
+        </p>
+
+        <form method="POST">
+          <textarea name="review"
+            class="form-control mb-3"
+            rows="5"
+            placeholder="Example: A wonderful emotional journey with stunning visuals..."
+          >{{ user_text }}</textarea>
+
+          <div class="d-flex justify-content-between">
+            <small class="text-muted">Neural Network (MLP) • TF-IDF • scikit-learn</small>
+            <button class="btn btn-primary px-4">Analyze</button>
+          </div>
+        </form>
+
+        {% if prediction %}
+          <hr class="my-4">
+          <div class="text-center">
+            <h4>
+              Prediction:
+              {% if prediction == "Positive" %}
+                <span class="badge bg-success">Positive 👍</span>
+              {% else %}
+                <span class="badge bg-danger">Negative 👎</span>
+              {% endif %}
+            </h4>
+            <p class="text-muted">Confidence: <strong>{{ confidence }}%</strong></p>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
