@@ -138,4 +138,8 @@ IMDB Rating < 8.0 → Negative (0)
 This allows you to train a real sentiment classifier using plot descriptions.
 
 - Future Improvements
-🔹 Add movie recommendation engine 🔹 Improve model accuracy using BERT / DistilBERT 🔹 Add real-time movie review scraping 🔹 Deploy on Render / Railway 🔹 Add user accounts & history
+🔹 Add movie recommendation engine
+🔹 Improve model accuracy using BERT / DistilBERT
+🔹 Add real-time movie review scraping
+🔹 Deploy on Render / Railway
+🔹 Add user accounts & history
